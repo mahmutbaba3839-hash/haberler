@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#101828">
+  <title>HaberNova Admin Panel</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="admin-body">
+  <div class="admin-layout">
+    <aside class="admin-sidebar">
+      <a class="brand" href="index.html">
+        <span class="brand__mark">HN</span>
+        <span>
+          <strong>HaberNova</strong>
+          <small>Admin panel</small>
+        </span>
+      </a>
+
+      <nav class="admin-menu" aria-label="Admin menüsü">
+        <button class="admin-tab active" type="button" data-panel="dashboard-panel">
+          <i data-lucide="layout-dashboard" aria-hidden="true"></i>
+          Dashboard
+        </button>
+        <button class="admin-tab" type="button" data-panel="news-panel">
+          <i data-lucide="newspaper" aria-hidden="true"></i>
+          Haberler
+        </button>
+        <button class="admin-tab" type="button" data-panel="ads-panel">
+          <i data-lucide="badge-dollar-sign" aria-hidden="true"></i>
+          Reklamlar
+        </button>
+        <button class="admin-tab" type="button" data-panel="users-panel">
+          <i data-lucide="users" aria-hidden="true"></i>
+          Kullanıcılar
+        </button>
+        <a href="index.html">
+          <i data-lucide="external-link" aria-hidden="true"></i>
+          Siteye dön
+        </a>
+      </nav>
+    </aside>
+
+    <main class="admin-main">
+      <header class="admin-topbar">
+        <div>
+          <h1>Yayın yönetimi</h1>
+          <p>Haber, reklam ve ekip akışını tek panelden yönetin.</p>
+        </div>
+        <div class="admin-actions">
+          <button class="ghost-button" id="theme-toggle" type="button">
+            <i data-lucide="moon" aria-hidden="true"></i>
+            Tema
+          </button>
+          <button class="ghost-button" id="export-data" type="button">
+            <i data-lucide="download" aria-hidden="true"></i>
+            JSON indir
+          </button>
+          <button class="danger-button" id="reset-data" type="button">
+            <i data-lucide="rotate-ccw" aria-hidden="true"></i>
+            Sıfırla
+          </button>
+        </div>
+      </header>
+
+      <section class="admin-panel" id="dashboard-panel">
+        <div class="metric-grid" id="metric-grid"></div>
+        <div class="admin-table-shell">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>En çok okunan haber</th>
+                <th>Kategori</th>
+                <th>Okuma</th>
+                <th>Durum</th>
+              </tr>
+            </thead>
+            <tbody id="top-news-table"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="admin-panel hidden-panel" id="news-panel">
+        <div class="admin-panel__header">
+          <h2>Haber yönetimi</h2>
+          <button class="action-button" id="new-article" type="button">
+            <i data-lucide="plus" aria-hidden="true"></i>
+            Yeni haber
+          </button>
+        </div>
+
+        <form class="admin-form form-card" id="article-form">
+          <input type="hidden" id="article-id">
+          <div class="form-grid">
+            <label class="form-field">
+              <span>Başlık</span>
+              <input id="article-title" type="text" maxlength="120" required>
+            </label>
+            <label class="form-field">
+              <span>Kategori</span>
+              <select id="article-category" required>
+                <option>Gündem</option>
+                <option>Ekonomi</option>
+                <option>Teknoloji</option>
+                <option>Spor</option>
+              </select>
+            </label>
+            <label class="form-field form-field--wide">
+              <span>Kısa açıklama</span>
+              <textarea id="article-summary" maxlength="260" required></textarea>
+            </label>
+            <label class="form-field form-field--wide">
+              <span>Görsel URL</span>
+              <input id="article-image" type="url" placeholder="https://images.unsplash.com/..." required>
+            </label>
+            <label class="form-field">
+              <span>Yazar</span>
+              <input id="article-author" type="text" maxlength="80" required>
+            </label>
+            <label class="form-field">
+              <span>Okuma süresi</span>
+              <input id="article-read-time" type="number" min="1" max="30" required>
+            </label>
+            <label class="form-field">
+              <span>Etiketler</span>
+              <input id="article-tags" type="text" placeholder="ekonomi, piyasa, analiz">
+            </label>
+            <label class="form-field">
+              <span>Okunma</span>
+              <input id="article-views" type="number" min="0" required>
+            </label>
+            <label class="form-field form-field--wide">
+              <span>Haber içeriği</span>
+              <textarea id="article-content" placeholder="Her paragrafı yeni satıra yazın." required></textarea>
+            </label>
+          </div>
+
+          <div class="toggle-grid">
+            <label class="toggle-row">
+              <input id="article-featured" type="checkbox">
+              <span>Slider</span>
+            </label>
+            <label class="toggle-row">
+              <input id="article-breaking" type="checkbox">
+              <span>Son dakika</span>
+            </label>
+            <label class="toggle-row">
+              <input id="article-trending" type="checkbox">
+              <span>Trend</span>
+            </label>
+          </div>
+
+          <div class="form-actions">
+            <button class="action-button" type="submit">
+              <i data-lucide="save" aria-hidden="true"></i>
+              Haberi kaydet
+            </button>
+            <button class="ghost-button" id="clear-form" type="button">
+              <i data-lucide="eraser" aria-hidden="true"></i>
+              Formu temizle
+            </button>
+          </div>
+        </form>
+
+        <div class="admin-table-shell">
+          <table class="admin-table">
+            <thead>
+              <tr>
+                <th>Haber</th>
+                <th>Kategori</th>
+                <th>Tarih</th>
+                <th>Okunma</th>
+                <th>İşlem</th>
+              </tr>
+            </thead>
+            <tbody id="articles-table"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="admin-panel hidden-panel" id="ads-panel">
+        <div class="admin-panel__header">
+          <h2>Reklam alanları</h2>
+        </div>
+        <form class="admin-form" id="ads-form">
+          <label class="form-field">
+            <span>Google AdSense Client ID</span>
+            <input id="adsense-client" type="text" placeholder="ca-pub-1234567890123456">
+          </label>
+          <div class="ad-admin-grid" id="ad-admin-grid"></div>
+          <div class="form-actions">
+            <button class="action-button" type="submit">
+              <i data-lucide="save" aria-hidden="true"></i>
+              Reklamları kaydet
+            </button>
+          </div>
+        </form>
+      </section>
+
+      <section class="admin-panel hidden-panel" id="users-panel">
+        <div class="admin-panel__header">
+          <h2>Kullanıcı yönetimi</h2>
+        </div>
+        <form class="admin-form" id="user-form">
+          <div class="form-grid">
+            <label class="form-field">
+              <span>Ad Soyad</span>
+              <input id="user-name" type="text" maxlength="80" required>
+            </label>
+            <label class="form-field">
+              <span>Rol</span>
+              <select id="user-role">
+                <option>Editör</option>
+                <option>Yönetici</option>
+                <option>Yazar</option>
+              </select>
+            </label>
+          </div>
+          <div class="form-actions">
+            <button class="action-button" type="submit">
+              <i data-lucide="user-plus" aria-hidden="true"></i>
+              Kullanıcı ekle
+            </button>
+          </div>
+        </form>
+        <div class="user-admin-grid" id="users-grid"></div>
+      </section>
+    </main>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <script src="admin.js" defer></script>
+</body>
+</html>
