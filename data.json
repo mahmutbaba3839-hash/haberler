@@ -1,0 +1,215 @@
+{
+  "site": {
+    "name": "HaberNova",
+    "description": "Modern, hızlı ve reklam gelirine hazır haber sitesi."
+  },
+  "settings": {
+    "adsenseClient": "",
+    "newsletterCount": 0
+  },
+  "adSlots": [
+    {
+      "id": "banner",
+      "name": "Üst Banner",
+      "position": "banner",
+      "active": true,
+      "label": "Üst sponsor alanı"
+    },
+    {
+      "id": "sidebar",
+      "name": "Sidebar",
+      "position": "sidebar",
+      "active": true,
+      "label": "Yan kolon reklam alanı"
+    },
+    {
+      "id": "inline",
+      "name": "Makale İçi",
+      "position": "inline",
+      "active": true,
+      "label": "Makale içi sponsor alanı"
+    }
+  ],
+  "users": [
+    {
+      "id": "editor-1",
+      "name": "Demo Editör",
+      "role": "Yönetici"
+    },
+    {
+      "id": "writer-1",
+      "name": "HaberNova Yazarı",
+      "role": "Yazar"
+    }
+  ],
+  "articles": [
+    {
+      "id": "gundem-yeni-donem",
+      "title": "Büyükşehirlerde ulaşım için yeni dönem başladı",
+      "summary": "Akıllı bilet, yoğunluk haritası ve hızlı aktarma modeliyle kent içi ulaşımda yeni uygulama devreye giriyor.",
+      "category": "Gündem",
+      "author": "Ayşe Demir",
+      "image": "https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1400&q=80",
+      "imageAlt": "Gazete ve şehir gündemi",
+      "date": "2026-05-06T09:30:00+03:00",
+      "readTime": 4,
+      "views": 18420,
+      "featured": true,
+      "breaking": true,
+      "trending": true,
+      "tags": ["ulaşım", "gündem", "şehir"],
+      "content": [
+        "Büyükşehirlerde toplu ulaşımı hızlandırmak için hazırlanan yeni entegrasyon modeli bugün itibarıyla kademeli olarak uygulanmaya başladı.",
+        "Model; hat yoğunluğu, aktarma süreleri ve anlık yolcu akışı gibi verileri tek panelde toplayarak belediyelere daha hızlı karar alma imkanı sunuyor.",
+        "Uzmanlara göre sistemin başarısı, açık veri paylaşımı ve mobil uygulama deneyiminin sade tutulmasına bağlı olacak."
+      ]
+    },
+    {
+      "id": "ekonomi-piyasalarda-sakin-acilis",
+      "title": "Piyasalarda sakin açılış: gözler faiz kararında",
+      "summary": "Küresel risk iştahındaki toparlanma ve merkez bankası mesajları, haftanın ilk işlem gününde piyasaların yönünü belirliyor.",
+      "category": "Ekonomi",
+      "author": "Mert Kaya",
+      "image": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1400&q=80",
+      "imageAlt": "Finans grafikleri ve piyasa ekranı",
+      "date": "2026-05-06T08:10:00+03:00",
+      "readTime": 5,
+      "views": 22350,
+      "featured": true,
+      "breaking": false,
+      "trending": true,
+      "tags": ["piyasa", "faiz", "borsa"],
+      "content": [
+        "Piyasalarda haftanın ana gündemi para politikası sinyalleri ve açıklanacak enflasyon verileri olacak.",
+        "Analistler, kısa vadede döviz ve hisse senedi tarafında veri akışına duyarlı bir fiyatlama bekliyor.",
+        "Yatırımcılar özellikle enerji, bankacılık ve teknoloji hisselerinde işlem hacminin artmasını izliyor."
+      ]
+    },
+    {
+      "id": "teknoloji-yapay-zeka-haber-merkezleri",
+      "title": "Yapay zeka haber merkezlerinde üretim hızını artırıyor",
+      "summary": "Editör destek araçları, veri analizi ve görsel arşiv otomasyonuyla dijital yayıncılığın iş akışı yeniden şekilleniyor.",
+      "category": "Teknoloji",
+      "author": "Selin Arslan",
+      "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1400&q=80",
+      "imageAlt": "Yapay zeka temalı dijital ekran",
+      "date": "2026-05-05T17:45:00+03:00",
+      "readTime": 6,
+      "views": 31200,
+      "featured": true,
+      "breaking": true,
+      "trending": true,
+      "tags": ["yapay zeka", "medya", "otomasyon"],
+      "content": [
+        "Haber merkezleri, rutin veri tarama ve başlık varyasyonu gibi işleri hızlandırmak için yapay zeka destekli araçlardan daha fazla yararlanıyor.",
+        "Editörler için en kritik başlık ise doğrulama süreçlerinin insan denetiminden geçmesi ve kaynak şeffaflığının korunması.",
+        "Uzmanlar, yapay zekanın haber üretimini tek başına devralmasından çok, araştırma ve yayın planlamasında güçlü bir yardımcı rol üstleneceğini belirtiyor."
+      ]
+    },
+    {
+      "id": "spor-final-maci-hazirliklari",
+      "title": "Final maçı öncesi takımlarda son hazırlıklar tamamlandı",
+      "summary": "Sezonun en kritik karşılaşması öncesinde teknik ekipler kadro planını netleştirirken taraftar ilgisi rekor seviyeye çıktı.",
+      "category": "Spor",
+      "author": "Can Yıldız",
+      "image": "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=1400&q=80",
+      "imageAlt": "Stadyumda futbol maçı atmosferi",
+      "date": "2026-05-05T14:20:00+03:00",
+      "readTime": 3,
+      "views": 27500,
+      "featured": true,
+      "breaking": false,
+      "trending": true,
+      "tags": ["futbol", "final", "spor"],
+      "content": [
+        "Final maçı öncesinde iki takım da son antrenmanını yüksek tempoda tamamladı.",
+        "Teknik heyetlerin maç planında orta saha baskısı ve kanat organizasyonları belirleyici rol oynayacak.",
+        "Güvenlik, ulaşım ve stadyum girişleri için ek önlemler alınırken biletlerin büyük bölümünün tükendiği açıklandı."
+      ]
+    },
+    {
+      "id": "ekonomi-ihracatta-yeni-hedef",
+      "title": "İhracatta yeni hedef: katma değerli üretim öne çıkıyor",
+      "summary": "Sanayi ve teknoloji yatırımlarının artmasıyla ihracat sepetinde yüksek katma değerli ürünlerin payı büyüyor.",
+      "category": "Ekonomi",
+      "author": "Mert Kaya",
+      "image": "https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1400&q=80",
+      "imageAlt": "Modern iş merkezi ve ekonomi",
+      "date": "2026-05-04T11:35:00+03:00",
+      "readTime": 4,
+      "views": 14680,
+      "featured": false,
+      "breaking": false,
+      "trending": false,
+      "tags": ["ihracat", "sanayi", "üretim"],
+      "content": [
+        "İhracat stratejisinde teknoloji yoğun üretim, lojistik verimlilik ve yeni pazar çeşitliliği ana başlıklar arasında yer alıyor.",
+        "Şirketler, kurumsal dönüşüm ve dijitalleşme yatırımlarıyla küresel rekabet gücünü artırmayı hedefliyor.",
+        "Ekonomistler, sürdürülebilir büyüme için finansmana erişim ve nitelikli iş gücünün belirleyici olacağını vurguluyor."
+      ]
+    },
+    {
+      "id": "teknoloji-siber-guvenlik-uyarisi",
+      "title": "Uzmanlardan yeni siber güvenlik uyarısı",
+      "summary": "Kimlik avı saldırılarında kullanılan yöntemler değişirken şirketlere çok faktörlü doğrulama ve düzenli eğitim çağrısı yapılıyor.",
+      "category": "Teknoloji",
+      "author": "Selin Arslan",
+      "image": "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1400&q=80",
+      "imageAlt": "Dizüstü bilgisayar ve güvenlik ekranı",
+      "date": "2026-05-03T16:05:00+03:00",
+      "readTime": 5,
+      "views": 17140,
+      "featured": false,
+      "breaking": true,
+      "trending": false,
+      "tags": ["siber güvenlik", "kimlik avı", "teknoloji"],
+      "content": [
+        "Siber güvenlik uzmanları, saldırganların güvenilir marka görünümlü mesajlarla kullanıcıları hedef aldığını belirtiyor.",
+        "Şirketlerin parola politikalarını yenilemesi, çok faktörlü doğrulamayı zorunlu hale getirmesi ve çalışan eğitimlerini sıklaştırması öneriliyor.",
+        "Bireysel kullanıcılar için bağlantı kontrolü, güncel yazılım kullanımı ve şüpheli dosyalardan uzak durmak temel güvenlik adımları arasında."
+      ]
+    },
+    {
+      "id": "gundem-yesil-alan-projesi",
+      "title": "Kent merkezinde yeni yeşil alan projesi duyuruldu",
+      "summary": "Yaya yolları, bisiklet parkurları ve açık etkinlik alanlarıyla şehir merkezinde nefes aldıracak yeni proje tanıtıldı.",
+      "category": "Gündem",
+      "author": "Ayşe Demir",
+      "image": "https://images.unsplash.com/photo-1493246507139-91e8fad9978e?auto=format&fit=crop&w=1400&q=80",
+      "imageAlt": "Şehir parkı ve yeşil alan",
+      "date": "2026-05-02T10:15:00+03:00",
+      "readTime": 4,
+      "views": 9800,
+      "featured": false,
+      "breaking": false,
+      "trending": false,
+      "tags": ["şehir", "park", "çevre"],
+      "content": [
+        "Kent merkezinde planlanan yeni yeşil alan projesi, farklı yaş gruplarına hitap eden sosyal alanlarla birlikte tasarlandı.",
+        "Projenin ilk etabında yürüyüş rotaları, çocuk oyun alanları ve açık hava etkinlik bölümleri tamamlanacak.",
+        "Yerel yönetim, bakım maliyetlerinin düşük tutulması için yerel bitki türlerinin tercih edileceğini açıkladı."
+      ]
+    },
+    {
+      "id": "spor-gencler-liginde-surpriz",
+      "title": "Gençler liginde sürpriz çıkış dikkat çekiyor",
+      "summary": "Altyapıdan yetişen oyuncuların performansı, kulüplerin transfer stratejilerinde genç yeteneklere ilgiyi artırdı.",
+      "category": "Spor",
+      "author": "Can Yıldız",
+      "image": "https://images.unsplash.com/photo-1526232761682-d26e03ac148e?auto=format&fit=crop&w=1400&q=80",
+      "imageAlt": "Futbol antrenmanı yapan genç sporcular",
+      "date": "2026-05-01T13:00:00+03:00",
+      "readTime": 3,
+      "views": 12550,
+      "featured": false,
+      "breaking": false,
+      "trending": false,
+      "tags": ["altyapı", "gençler", "futbol"],
+      "content": [
+        "Gençler liginde bu sezon öne çıkan performanslar, kulüplerin izleme ekiplerinin radarına girdi.",
+        "Teknik direktörler, genç oyuncuların fiziksel gelişimi kadar karar verme becerisinin de üst seviyeye çıktığını belirtiyor.",
+        "Spor yorumcularına göre doğru planlama yapılırsa yeni jenerasyon kısa sürede A takım seviyesine taşınabilir."
+      ]
+    }
+  ]
+}
