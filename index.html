@@ -1,41 +1,215 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Haberler </title>
-    <link rel="stylesheet" href="style.css">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2832765493407032"
+     crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="HaberNova - Son dakika, gündem, ekonomi, teknoloji ve spor haberleri için hızlı, mobil uyumlu ve SEO odaklı haber sitesi.">
+  <meta name="keywords" content="haber, son dakika, gündem, ekonomi, spor, teknoloji">
+  <meta name="author" content="HaberNova">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="HaberNova | Son Dakika ve Güncel Haberler">
+  <meta property="og:description" content="Türkiye ve dünyadan güncel haberleri hızlı, sade ve güvenilir bir deneyimle takip edin.">
+  <meta property="og:image" content="https://images.unsplash.com/photo-1495020689067-958852a7765e?auto=format&fit=crop&w=1200&q=80">
+  <meta property="og:locale" content="tr_TR">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#101828">
+  <link rel="canonical" href="./index.html">
+  <title>HaberNova | Son Dakika ve Güncel Haberler</title>
+  <link rel="preconnect" href="https://images.unsplash.com">
+  <link rel="preconnect" href="https://unpkg.com">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsMediaOrganization",
+      "name": "HaberNova",
+      "url": "./index.html",
+      "logo": "./index.html",
+      "sameAs": []
+    }
+  </script>
 </head>
-
-
-
 <body>
-    
-    <header class="site-header">
-        <div class="container">
-          <div class="logo">
-            <a href="#">BenimSitem</a>
+  <a class="skip-link" href="#main-content">İçeriğe geç</a>
+
+  <header class="site-header" id="site-header">
+    <div class="top-strip">
+      <div class="container top-strip__inner">
+        <span class="live-dot" aria-hidden="true"></span>
+        <span>Canlı yayın akışı</span>
+        <span id="current-date"></span>
+      </div>
+    </div>
+
+    <div class="container header-main">
+      <a class="brand" href="index.html" aria-label="HaberNova ana sayfa">
+        <span class="brand__mark">HN</span>
+        <span>
+          <strong>HaberNova</strong>
+          <small>Güncel haber merkezi</small>
+        </span>
+      </a>
+
+      <nav class="main-nav" aria-label="Ana menü">
+        <button class="nav-link active" data-category="Tümü">Tümü</button>
+        <button class="nav-link" data-category="Gündem">Gündem</button>
+        <button class="nav-link" data-category="Ekonomi">Ekonomi</button>
+        <button class="nav-link" data-category="Teknoloji">Teknoloji</button>
+        <button class="nav-link" data-category="Spor">Spor</button>
+      </nav>
+
+      <div class="header-actions">
+        <label class="search-field" for="site-search">
+          <i data-lucide="search" aria-hidden="true"></i>
+          <input id="site-search" type="search" placeholder="Haber ara" autocomplete="off">
+        </label>
+        <button class="icon-button" id="theme-toggle" type="button" aria-label="Tema değiştir">
+          <i data-lucide="moon" aria-hidden="true"></i>
+        </button>
+        </a>
+      </div>
+    </div>
+
+    <div class="breaking-wrap" aria-label="Son dakika haberleri">
+      <div class="container breaking">
+        <strong>Son Dakika</strong>
+        <div class="breaking__ticker" id="breaking-ticker"></div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="ad-slot ad-slot--top container" data-ad-position="banner">
+      <span>Reklam</span>
+      <strong>Üst Banner Alanı</strong>
+      <small>Sponsor slotu</small>
+    </section>
+
+    <section class="home-view" id="home-view">
+      <div class="container hero-layout">
+        <section class="lead-slider" aria-label="Öne çıkan haberler">
+          <div class="slider-shell" id="slider-shell"></div>
+          <div class="slider-controls">
+            <button class="icon-button" id="prev-slide" type="button" aria-label="Önceki haber">
+              <i data-lucide="chevron-left" aria-hidden="true"></i>
+            </button>
+            <div class="slider-dots" id="slider-dots" aria-label="Slider sayfaları"></div>
+            <button class="icon-button" id="next-slide" type="button" aria-label="Sonraki haber">
+              <i data-lucide="chevron-right" aria-hidden="true"></i>
+            </button>
           </div>
-      
-          <nav class="nav">
-            <ul>
-              <li><a href="index.html">Anasayfa</a></li>
-              <li><a href="hakkinda.html">Hakkında</a></li>
-              <li><a href="#">İletişim</a></li>
-            </ul>
-          </nav>
-      
-          <div class="auth-buttons">
-            <a href="#" class="btn login">Giriş Yap</a>
-            <a href="#" class="btn register">Kayıt Ol</a>
+        </section>
+
+        <aside class="side-panel" aria-label="Trend haberler">
+          <div class="section-heading section-heading--compact">
+            <span>Trend</span>
+            <h2>En çok okunanlar</h2>
           </div>
+          <div class="trend-list" id="trend-list"></div>
+          <section class="ad-slot ad-slot--sidebar" data-ad-position="sidebar">
+            <span>Reklam</span>
+            <strong>Sidebar Slot</strong>
+          </section>
+        </aside>
+      </div>
+
+      <section class="container category-bar" aria-label="Kategori filtreleri">
+        <button class="category-pill active" data-category="Tümü">Tümü</button>
+        <button class="category-pill" data-category="Gündem">Gündem</button>
+        <button class="category-pill" data-category="Ekonomi">Ekonomi</button>
+        <button class="category-pill" data-category="Teknoloji">Teknoloji</button>
+        <button class="category-pill" data-category="Spor">Spor</button>
+      </section>
+
+      <section class="container content-layout">
+        <div class="news-column">
+          <div class="section-heading">
+            <span>Güncel</span>
+            <h1>Son haberler</h1>
+          </div>
+          <div class="news-grid" id="news-grid"></div>
         </div>
-      </header>
-      
 
+        <aside class="briefing-panel" aria-label="Kısa özetler">
+          <div class="section-heading section-heading--compact">
+            <span>Ajanda</span>
+            <h2>Hızlı bakış</h2>
+          </div>
+          <div class="briefing-list" id="briefing-list"></div>
+          <section class="ad-slot ad-slot--inline" data-ad-position="inline">
+            <span>Reklam</span>
+            <strong>Inline Reklam Alanı</strong>
+          </section>
+          <form class="newsletter-box" id="newsletter-form">
+            <h2>Günün özeti</h2>
+            <p>Öne çıkan haberleri e-posta kutunuzda takip edin.</p>
+            <label for="newsletter-email">E-posta</label>
+            <div>
+              <input id="newsletter-email" type="email" placeholder="ornek@mail.com" required>
+              <button type="submit">Kaydol</button>
+            </div>
+          </form>
+        </aside>
+      </section>
+    </section>
+
+    <article class="article-view container hidden" id="article-view" aria-live="polite">
+      <button class="back-button" id="back-home" type="button">
+        <i data-lucide="arrow-left" aria-hidden="true"></i>
+        Haber akışına dön
+      </button>
+      <div class="article-shell">
+        <div class="article-main" id="article-main"></div>
+        <aside class="article-aside">
+          <section class="ad-slot ad-slot--sidebar" data-ad-position="sidebar">
+            <span>Reklam</span>
+            <strong>Makale Yan Reklam</strong>
+          </section>
+          <section class="related-box">
+            <div class="section-heading section-heading--compact">
+              <span>Devamı</span>
+              <h2>Benzer haberler</h2>
+            </div>
+            <div id="related-news"></div>
+          </section>
+        </aside>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand--footer" href="index.html">
+          <span class="brand__mark">HN</span>
+          <span>
+            <strong>HaberNova</strong>
+            <small>Bağımsız dijital haber deneyimi</small>
+          </span>
+        </a>
+        <p>Gündem, ekonomi, teknoloji ve spor haberleri tek akışta.</p>
+      </div>
+      <div>
+        <h2>Kategoriler</h2>
+        <a href="index.html?category=Gündem">Gündem</a>
+        <a href="index.html?category=Ekonomi">Ekonomi</a>
+        <a href="index.html?category=Teknoloji">Teknoloji</a>
+        <a href="index.html?category=Spor">Spor</a>
+      </div>
+      <div>
+        <h2>Yönetim</h2>
+        <a href="admin.html">Admin panel</a>
+        <a href="#site-header">Yukarı dön</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <script src="script.js" defer></script>
 </body>
-
-
-
-
 </html>
