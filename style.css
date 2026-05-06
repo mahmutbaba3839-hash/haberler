@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .site-header {
+    background: #0f172a;
+    padding: 15px 0;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo a {
+    color: #fff;
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  /* Menü */
+  .nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+  }
+  
+  .nav ul li a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s;
+  }
+  
+  .nav ul li a:hover {
+    color: #fff;
+  }
+  
+  /* Giriş / Kayıt */
+  .auth-buttons {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .btn {
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: all 0.3s;
+  }
+  
+  .login {
+    color: #fff;
+    border: 1px solid #38bdf8;
+  }
+  
+  .login:hover {
+    background: #38bdf8;
+    color: #000;
+  }
+  
+  .register {
+    background: #38bdf8;
+    color: #000;
+  }
+  
+  .register:hover {
+    background: #0ea5e9;
+  }
+    .hakkimda {
+        background-color: red;
+        padding: 30px 40px;
+        border-radius: 5px;
+      }
